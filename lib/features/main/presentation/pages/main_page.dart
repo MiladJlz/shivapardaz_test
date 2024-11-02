@@ -4,8 +4,8 @@ import 'package:shivapardaz_test/features/main/presentation/bloc/photo_event.dar
 import 'package:shivapardaz_test/features/main/presentation/widgets/custom_card.dart';
 
 import '../../../../core/utils/show_snackbar.dart';
-import '../bloc/bloc_state.dart';
 import '../bloc/photo_bloc.dart';
+import '../bloc/photo_state.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({super.key});
@@ -49,7 +49,6 @@ class _MainPageState extends State<MainPage> {
           if (state is PhotosDisplaySuccess) {
             return ListView.builder(
               controller: _scrollController,
-              itemExtent: 80,
               itemCount: state.photos.length + 1,
               itemBuilder: (context, index) {
                 if (index == state.photos.length) {
