@@ -39,9 +39,6 @@ class _CustomCardState extends State<CustomCard> {
                     ),
                   ],
                 ),
-                SizedBox(
-                  height: 20,
-                ),
                 Row(
                   children: [
                     const Text(

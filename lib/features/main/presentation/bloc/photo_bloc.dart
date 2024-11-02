@@ -3,13 +3,13 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../../core/usecase/usecase.dart';
 import '../../domain/entities/photo.dart';
 import '../../domain/usecases/get_all_photos.dart';
-import 'photo_state.dart';
 import 'photo_event.dart';
+import 'photo_state.dart';
 
 class PhotoBloc extends Bloc<PhotoEvent, PhotoState> {
   final GetAllPhotos _getAllPhotos;
   int _currentPage = 0;
-  final int _pageSize = 11;
+  final int _pageSize = 9;
   late final List<Photo> allPhotos;
 
   PhotoBloc({

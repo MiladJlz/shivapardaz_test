@@ -49,6 +49,7 @@ class _MainPageState extends State<MainPage> {
           if (state is PhotosDisplaySuccess) {
             return ListView.builder(
               controller: _scrollController,
+              itemExtent: 100,
               itemCount: state.photos.length + 1,
               itemBuilder: (context, index) {
                 if (index == state.photos.length) {
