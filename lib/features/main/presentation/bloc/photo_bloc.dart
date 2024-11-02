@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../../core/usecase/usecase.dart';
 import '../../domain/entities/photo.dart';
 import '../../domain/usecases/get_all_photos.dart';
-import 'bloc_state.dart';
+import 'photo_state.dart';
 import 'photo_event.dart';
 
 class PhotoBloc extends Bloc<PhotoEvent, PhotoState> {

@@ -1,6 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
+import '../../../../core/constants/constants.dart';
 import '../../domain/entities/photo.dart';
 
 class CustomCard extends StatefulWidget {
@@ -28,27 +29,29 @@ class _CustomCardState extends State<CustomCard> {
                 Row(
                   children: [
                     const Text(
-                      "Album ID: ",
-                      style: TextStyle(fontSize: 12),
+                      Constants.albumIDText,
+                      style: TextStyle(fontSize: Constants.primaryFontSize),
                     ),
                     Text(
                       widget.photo.id.toString(),
-                      style: TextStyle(fontSize: 13),
+                      style: const TextStyle(
+                          fontSize: Constants.secondaryFontSize),
                     ),
                   ],
                 ),
                 Row(
                   children: [
                     const Text(
-                      "Title: ",
-                      style: TextStyle(fontSize: 12),
+                      Constants.titleText,
+                      style: TextStyle(fontSize: Constants.primaryFontSize),
                     ),
                     SizedBox(
                       width: 200,
                       child: Text(
                         widget.photo.title ?? "",
                         overflow: TextOverflow.ellipsis,
-                        style: const TextStyle(fontSize: 13),
+                        style: const TextStyle(
+                            fontSize: Constants.secondaryFontSize),
                       ),
                     ),
                   ],
@@ -58,7 +61,6 @@ class _CustomCardState extends State<CustomCard> {
             ClipRRect(
               borderRadius: BorderRadius.circular(10000.0),
               child: CachedNetworkImage(
-                fit: BoxFit.contain,
                 width: 50,
                 height: 50,
                 imageUrl: "${widget.photo.thumbnailUrl}",

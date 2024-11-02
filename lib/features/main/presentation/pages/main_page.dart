@@ -4,7 +4,7 @@ import 'package:shivapardaz_test/features/main/presentation/bloc/photo_event.dar
 import 'package:shivapardaz_test/features/main/presentation/widgets/custom_card.dart';
 
 import '../../../../core/utils/show_snackbar.dart';
-import '../bloc/bloc_state.dart';
+import '../bloc/photo_state.dart';
 import '../bloc/photo_bloc.dart';
 
 class MainPage extends StatefulWidget {
