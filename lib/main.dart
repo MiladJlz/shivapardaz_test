@@ -8,11 +8,12 @@ import 'init_dependencies.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   initDependencies();
-  runApp(MultiBlocProvider(providers: [
+  runApp(
     BlocProvider(
+      child: const MyApp(),
       create: (context) => serviceLocator<PhotoBloc>(),
     ),
-  ], child: const MyApp()));
+  );
 }
 
 class MyApp extends StatelessWidget {

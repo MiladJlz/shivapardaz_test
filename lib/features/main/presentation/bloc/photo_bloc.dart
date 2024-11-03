@@ -30,7 +30,7 @@ class PhotoBloc extends Bloc<PhotoEvent, PhotoState> {
       (l) => emit(PhotoFailure(l.message)),
       (r) {
         allPhotos = r;
-        emit(PhotosDisplaySuccess(_getPhotosForPage(_currentPage), r.isEmpty));
+        emit(PhotosDisplaySuccess(_getPhotosForPage(_currentPage)));
       },
     );
   }
@@ -47,7 +47,6 @@ class PhotoBloc extends Bloc<PhotoEvent, PhotoState> {
         photos = [...currentState.photos, ...photos];
         emit(PhotosDisplaySuccess(
           photos,
-          photos.isEmpty,
         ));
       } catch (e) {
         emit(PhotoFailure(e.toString()));
